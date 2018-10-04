@@ -8,10 +8,11 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 
  
-//Ejemplo: GET http://localhost:8080/items?filter=ABC
-app.get('/home', function(req, res) {
-  var filter = req.query.filter;
-  res.send(filter);
+
+//Ejemplo: GET http://localhost:8080/items/10
+app.get('/items/:id', function(req, res, next) {
+  var itemId = req.params.id;
+  res.send('Get ' + req.params.id);
 });
  
 //Ejemplo: POST http://localhost:8080/items
