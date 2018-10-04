@@ -6,7 +6,7 @@ app.use(bodyParser.json()); // soporte para bodies codificados en jsonsupport
 app.use(bodyParser.urlencoded({ extended: true })); // soporte para bodies codificados
  
 //Ejemplo: GET http://localhost:8080/items
-app.get('/items', function(req, res, next) {
+app.get('/home', function(req, res, next) {
   if(req.query.filter) {
    next();
    return;
